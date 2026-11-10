@@ -525,7 +525,7 @@ function showSuccess(booking) {
   els.success.hidden = false;
   els.booking.classList.add('is-complete');
   writeStore();
-  els.booking.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  els.booking.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
   const title = $('.success__title', els.success);
   if (title) {
     title.setAttribute('tabindex', '-1');
@@ -549,7 +549,7 @@ function goToStep(n, opts = {}) {
   els.status.textContent = `Step ${step} of 5 · ${STEP_NAMES[step - 1]}`;
   if (step === 5) renderReview();
   writeStore();
-  if (opts.scroll) els.booking.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (opts.scroll) els.booking.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
   if (opts.focus !== false) {
     const heading = $(`.step[data-step="${step}"] .step__title`, els.form);
     if (heading) {
