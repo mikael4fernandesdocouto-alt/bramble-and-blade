@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bramble &amp; Blade — London Barbers | Portfolio Demo</title>
+  <meta name="description" content="Sharp cuts, proper beard trims and good conversation. Explore Bramble &amp; Blade, a fictional London barbershop with an interactive booking demo.">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Bramble &amp; Blade — London Barbers">
+  <meta property="og:description" content="A sharp cut. A proper beard trim. A chat worth staying for. A fictional barbershop portfolio demo.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <header class="site-header" id="topo">
+    <a class="brand" href="#topo" aria-label="Bramble and Blade, back to home">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">Bramble &amp; Blade</span>
+    </a>
+    <nav class="nav" id="menu-principal" aria-label="Main navigation">
+      <a href="#servicos">Services</a>
+      <a href="#barbeiros">Barbers</a>
+      <a href="#galeria">Gallery</a>
+      <a href="#depoimentos">Reviews</a>
+      <a href="#onde">Find us</a>
+      <a class="nav__cta" href="#agendar">Book now</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <video class="hero__video" src="assets/video/hero.mp4" poster="assets/img/hero-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      </div>
+      <div class="hero__inner wrap">
+        <p class="hero__eyebrow"><span class="dot" aria-hidden="true"></span>London barbers · Portfolio demo</p>
+        <h1 class="hero__title" id="hero-title"><span class="hero__word">Bramble</span><span class="hero__word hero__word--outline">&amp; Blade</span></h1>
+        <p class="hero__lede">A sharp cut. A proper beard trim. A chat worth staying for.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#agendar">Book an appointment</a>
+          <a class="link-quiet" href="#servicos">View services &amp; prices</a>
+        </div>
+        <dl class="hero__meta">
+          <div><dt>Opening hours</dt><dd>Mon–Sat, 9am–7pm</dd></div>
+          <div><dt>Neighbourhood</dt><dd>Shoreditch, London</dd></div>
+          <div><dt>The shop</dt><dd>A fictional concept</dd></div>
+        </dl>
+      </div>
+      <p class="hero__address" aria-hidden="true">Shoreditch, London · Demo location</p>
+      <span class="hero__cue" aria-hidden="true"><span></span></span>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Haircuts</span><span class="marquee__sep">/</span><span>Beards</span><span class="marquee__sep">/</span><span>Razor work</span><span class="marquee__sep">/</span><span>Hot towels</span><span class="marquee__sep">/</span><span>Skin fades</span><span class="marquee__sep">/</span><span>Shape-ups</span><span class="marquee__sep">/</span><span>Colour blending</span><span class="marquee__sep">/</span><span>Eyebrows</span><span class="marquee__sep">/</span>
+        <span>Haircuts</span><span class="marquee__sep">/</span><span>Beards</span><span class="marquee__sep">/</span><span>Razor work</span><span class="marquee__sep">/</span><span>Hot towels</span><span class="marquee__sep">/</span><span>Skin fades</span><span class="marquee__sep">/</span><span>Shape-ups</span><span class="marquee__sep">/</span><span>Colour blending</span><span class="marquee__sep">/</span><span>Eyebrows</span><span class="marquee__sep">/</span>
+      </div>
+    </div>
+
+    <section class="section section--services" id="servicos" aria-labelledby="servicos-title">
+      <div class="wrap services">
+        <div class="services__side reveal">
+          <p class="section__index">01 / Services</p>
+          <h2 class="section__title" id="servicos-title">The good stuff</h2>
+          <p class="section__note">Good barbering, straightforward prices. Pick your service and settle into the chair.</p>
+          <p class="fineprint">Haircuts include a wash and finish. Beard trims include a hot towel. Illustrative prices in pounds sterling (GBP).</p>
+        </div>
+        <ol class="menu reveal" aria-label="Services and prices">
+          <li class="menu__row">
+            <span class="menu__name">Haircut<span class="menu__desc">clippers or scissors</span></span>
+            <span class="menu__dots" aria-hidden="true"></span>
+            <span class="menu__dur">45 min</span>
+            <span class="menu__price">£35</span>
+          </li>
+          <li class="menu__row">
+            <span class="menu__name">Beard trim<span class="menu__desc">razor finish and hot towel</span></span>
+            <span class="menu__dots" aria-hidden="true"></span>
+            <span class="menu__dur">30 min</span>
+            <span class="menu__price">£25</span>
+          </li>
+          <li class="menu__row">
+            <span class="menu__name">Haircut &amp; beard<span class="menu__desc">the full tidy-up</span></span>
+            <span class="menu__dots" aria-hidden="true"></span>
+            <span class="menu__dur">1 hr 15 min</span>
+            <span class="menu__price">£55</span>
+          </li>
+          <li class="menu__row">
+            <span class="menu__name">Eyebrow tidy<span class="menu__desc">a precise razor finish</span></span>
+            <span class="menu__dots" aria-hidden="true"></span>
+            <span class="menu__dur">15 min</span>
+            <span class="menu__price">£10</span>
+          </li>
+          <li class="menu__row">
+            <span class="menu__name">Colour blending<span class="menu__desc">a fuller, more even look</span></span>
+            <span class="menu__dots" aria-hidden="true"></span>
+            <span class="menu__dur">30 min</span>
+            <span class="menu__price">£20</span>
+          </li>
+          <li class="menu__row">
+            <span class="menu__name">Shape-up<span class="menu__desc">keep things sharp between cuts</span></span>
+            <span class="menu__dots" aria-hidden="true"></span>
+            <span class="menu__dur">15 min</span>
+            <span class="menu__price">£12</span>
+          </li>
+          <li class="menu__row">
+            <span class="menu__name">Children’s haircut<span class="menu__desc">aged 10 and under</span></span>
+            <span class="menu__dots" aria-hidden="true"></span>
+            <span class="menu__dur">30 min</span>
+            <span class="menu__price">£25</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section section--barbers" id="barbeiros" aria-labelledby="barbeiros-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="section__index">02 / Barbers</p>
+          <h2 class="section__title" id="barbeiros-title">Three chairs.<br>Three characters.</h2>
+          <p class="section__note">Find the barber who gets your style. Choose your favourite or take the first available appointment. Meet our fictional team below.</p>
+        </div>
+
+        <div class="barbers">
+          <article class="barber reveal" data-accent="rafa">
+            <div class="barber__portrait">
+              <img src="assets/img/barber-rafa.jpg" alt="Barber working with clippers — illustrative photograph" width="1000" height="1250" loading="lazy">
+              <span class="plate__tag" aria-hidden="true">Oliver</span>
+            </div>
+            <div class="barber__body">
+              <p class="barber__num">01</p>
+              <h3 class="barber__name">Oliver Bennett</h3>
+              <p class="barber__role">Fades, clippers and scissors · 9 years behind the chair</p>
+              <p class="barber__bio">A local lad with an eye for a clean finish. Oliver keeps the chat easy and the cuts sharp. Not sure what suits you? A couple of questions and he’ll find your look.</p>
+              <ul class="tags" aria-label="Oliver’s specialities">
+                <li>Skin fades</li><li>Clippers</li><li>Scissors</li>
+              </ul>
+              <a class="barber__link" href="#agendar" data-barber-shortcut="rafa">Book with Oliver</a>
+            </div>
+          </article>
+
+          <article class="barber reveal" data-accent="diego">
+            <div class="barber__portrait">
+              <img src="assets/img/barber-diego.jpg" alt="Client with a neatly shaped full beard — illustrative photograph" width="1000" height="1250" loading="lazy">
+              <span class="plate__tag" aria-hidden="true">Harry</span>
+            </div>
+            <div class="barber__body">
+              <p class="barber__num">02</p>
+              <h3 class="barber__name">Harry Clarke</h3>
+              <p class="barber__role">Beards, razors and hot towels · 6 years</p>
+              <p class="barber__bio">Harry’s your man for a proper beard trim. Precise lines, a hot towel and time to get it right. He’s just as happy sorting a quick midweek shape-up.</p>
+              <ul class="tags" aria-label="Harry’s specialities">
+                <li>Beards</li><li>Razor work</li><li>Hot towels</li>
+              </ul>
+              <a class="barber__link" href="#agendar" data-barber-shortcut="diego">Book with Harry</a>
+            </div>
+          </article>
+
+          <article class="barber reveal" data-accent="lucas">
+            <div class="barber__portrait">
+              <img src="assets/img/barber-lu.jpg" alt="Barber cutting a client’s hair — illustrative photograph" width="1000" height="1250" loading="lazy">
+              <span class="plate__tag" aria-hidden="true">George</span>
+            </div>
+            <div class="barber__body">
+              <p class="barber__num">03</p>
+              <h3 class="barber__name">George Ellis</h3>
+              <p class="barber__role">Scissor cuts, classics and children · 3 years</p>
+              <p class="barber__bio">The youngest of the team, with endless patience for little ones. George loves a classic cut and knows how to keep things looking good while you grow your hair out.</p>
+              <ul class="tags" aria-label="George’s specialities">
+                <li>Scissor cuts</li><li>Classics</li><li>Children</li>
+              </ul>
+              <a class="barber__link" href="#agendar" data-barber-shortcut="lucas">Book with George</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--booking" id="agendar" aria-labelledby="agendar-title">
+      <div class="wrap booking-layout">
+        <div class="booking__intro reveal">
+          <p class="section__index">03 / Book an appointment</p>
+          <h2 class="section__title" id="agendar-title">Your chair.<br>Your time.</h2>
+          <p class="section__note">Try the booking experience. Choose a barber, pick your service and find a time that suits. This is a demo: availability is simulated and no real appointment is made.</p>
+          <dl class="booking__info">
+            <div><dt>Opening hours</dt><dd>Monday to Saturday, 9am–7pm</dd></div>
+            <div><dt>Location</dt><dd>Shoreditch, London — fictional shop</dd></div>
+            <div><dt>Demo contact</dt><dd>020 7946 0328 · not in service</dd></div>
+          </dl>
+          <p class="fineprint">All appointment times use London time (GMT/BST). Closed Sundays. Use sample details: bookings are stored only in this browser, and no messages are sent.</p>
+        </div>
+
+        <div class="booking reveal" id="booking">
+          <div class="booking__top">
+            <p class="booking__status" id="booking-status" role="status" aria-live="polite">Step 1 of 5 · Barber</p>
+            <ol class="steps" aria-label="Booking steps">
+              <li class="steps__item is-active" data-step-dot="1"><span>1</span>Barber</li>
+              <li class="steps__item" data-step-dot="2"><span>2</span>Service</li>
+              <li class="steps__item" data-step-dot="3"><span>3</span>Date</li>
+              <li class="steps__item" data-step-dot="4"><span>4</span>Details</li>
+              <li class="steps__item" data-step-dot="5"><span>5</span>Confirm</li>
+            </ol>
+          </div>
+
+          <form id="booking-form" novalidate>
+            <div class="booking__body">
+              <section class="step is-active" data-step="1" aria-labelledby="step1-title">
+                <h3 class="step__title" id="step1-title">Who’s cutting your hair?</h3>
+                <p class="step__hint">No preference? We’ll match you with an available barber and show you who you’re booked with.</p>
+                <div class="choice-list" id="barber-options" role="radiogroup" aria-labelledby="step1-title"></div>
+                <p class="field-error" id="barber-error" hidden>Choose a barber to continue.</p>
+                <div class="step__nav step__nav--end">
+                  <button class="btn btn--primary" type="button" data-next>Continue</button>
+                </div>
+              </section>
+
+              <section class="step" data-step="2" aria-labelledby="step2-title" hidden>
+                <h3 class="step__title" id="step2-title">What are we doing today?</h3>
+                <p class="step__hint">Pick a service to see its price and duration. Add a little extra if you fancy.</p>
+                <div class="choice-list" id="service-options" role="radiogroup" aria-labelledby="step2-title"></div>
+                <p class="field-error" id="service-error" hidden>Choose a service to continue.</p>
+                <fieldset class="addons">
+                  <legend>Extras <span>(optional)</span></legend>
+                  <div id="addon-options"></div>
+                </fieldset>
+                <div class="step__nav">
+                  <button class="btn btn--ghost" type="button" data-back>Back</button>
+                  <button class="btn btn--primary" type="button" data-next>Continue</button>
+                </div>
+              </section>
+
+              <section class="step" data-step="3" aria-labelledby="step3-title" hidden>
+                <h3 class="step__title" id="step3-title">When suits you?</h3>
+                <p class="step__hint" id="date-hint">The next 14 days. Closed Sundays. All times are London time.</p>
+                <div class="date-strip" id="date-options" role="group" aria-label="Choose a date"></div>
+                <p class="field-error" id="date-error" hidden>Choose a date to see available times.</p>
+                <div class="time-block">
+                  <p class="time-block__label" id="time-label">Available times</p>
+                  <p class="assigned-note" id="assigned-note" hidden></p>
+                  <div class="time-grid" id="time-options" role="group" aria-labelledby="time-label"></div>
+                  <p class="empty" id="time-empty" hidden>No appointments available that day. Try another date or barber.</p>
+                </div>
+                <p class="field-error" id="time-error" hidden>Choose a time to continue.</p>
+                <div class="step__nav">
+                  <button class="btn btn--ghost" type="button" data-back>Back</button>
+                  <button class="btn btn--primary" type="button" data-next>Continue</button>
+                </div>
+              </section>
+
+              <section class="step" data-step="4" aria-labelledby="step4-title" hidden>
+                <h3 class="step__title" id="step4-title">Who’s taking the chair?</h3>
+                <p class="step__hint">Try a sample name and UK mobile number, such as Alex and 07700 900123. Details stay in this browser; no calls or messages are sent.</p>
+                <div class="fields">
+                  <div class="field">
+                    <label for="client-name">Name</label>
+                    <input id="client-name" name="name" type="text" autocomplete="off" placeholder="What shall we call you?" maxlength="60" aria-describedby="name-error">
+                    <p class="field-error" id="name-error" hidden>Enter a name with at least 2 characters.</p>
+                  </div>
+                  <div class="field">
+                    <label for="client-phone">UK mobile number</label>
+                    <input id="client-phone" name="phone" type="tel" inputmode="tel" autocomplete="off" placeholder="07700 900123" maxlength="20" aria-describedby="phone-error">
+                    <p class="field-error" id="phone-error" hidden>Enter a UK mobile number, such as 07700 900123 or +44 7700 900123.</p>
+                  </div>
+                </div>
+                <label class="consent">
+                  <input type="checkbox" id="consent" name="consent">
+                  <span>I understand this is a demo booking, stored only in this browser.</span>
+                </label>
+                <p class="field-error" id="consent-error" hidden>Please tick the box to continue.</p>
+                <div class="step__nav">
+                  <button class="btn btn--ghost" type="button" data-back>Back</button>
+                  <button class="btn btn--primary" type="button" data-next>Review booking</button>
+                </div>
+              </section>
+
+              <section class="step" data-step="5" aria-labelledby="step5-title" hidden>
+                <h3 class="step__title" id="step5-title">All looking good?</h3>
+                <p class="step__hint">Check your details, then confirm your demo booking. You can preview the confirmation message afterwards.</p>
+                <dl class="review" id="review-list"></dl>
+                <p class="fineprint">Confirming blocks this time only in this browser. Use the cancel button on the summary to release it. No payment or real reservation is made.</p>
+                <div class="step__nav">
+                  <button class="btn btn--ghost" type="button" data-back>Back</button>
+                  <button class="btn btn--primary" type="submit">Confirm demo booking</button>
+                </div>
+              </section>
+            </div>
+          </form>
+
+          <div class="success" id="booking-success" role="status" aria-live="polite" hidden>
+            <p class="success__kicker">Demo booking saved</p>
+            <h3 class="success__title">All set, <span id="success-name">friend</span>.</h3>
+            <p class="success__text">That’s the booking experience. Your sample appointment is saved in this browser only. Nothing has been sent to a barbershop.</p>
+            <dl class="review" id="success-review"></dl>
+            <div class="success__actions">
+              <button class="btn btn--primary" id="whatsapp-link" type="button" aria-expanded="false" aria-controls="message-preview">Preview confirmation</button>
+              <button class="btn btn--ghost" type="button" id="cancel-booking">Cancel demo booking</button>
+              <button class="link-quiet" type="button" id="new-booking">Make another booking</button>
+            </div>
+            <pre id="message-preview" class="message-preview" hidden></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--gallery" id="galeria" aria-labelledby="galeria-title">
+      <div class="wrap">
+        <div class="gallery__head reveal">
+          <div>
+            <p class="section__index">04 / Gallery</p>
+            <h2 class="section__title" id="galeria-title">The chair.<br>The craft.<br>The finish.</h2>
+          </div>
+          <p class="section__note">A feel for the craft and the space. Illustrative photography for this concept. Select an image for a closer look.</p>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <button class="shot shot--tall reveal" type="button" data-lightbox-title="Clipper fade" data-lightbox-src="assets/img/shop-1.jpg">
+            <img src="assets/img/shop-1.jpg" alt="A clipper fade in progress, viewed from behind" width="1000" height="1500" loading="lazy">
+            <span class="shot__label">Fade · clippers</span>
+          </button>
+          <button class="shot shot--wide reveal" type="button" data-lightbox-title="Scissors and comb" data-lightbox-src="assets/img/shop-2.jpg">
+            <img src="assets/img/shop-2.jpg" alt="Barber cutting hair with scissors and a comb, in black and white" width="1500" height="1000" loading="lazy">
+            <span class="shot__label">Scissors · comb</span>
+          </button>
+          <button class="shot reveal" type="button" data-lightbox-title="Tools of the trade" data-lightbox-src="assets/img/shop-3.jpg">
+            <img src="assets/img/shop-3.jpg" alt="Barber’s scissors hanging on a wooden wall" width="1000" height="1500" loading="lazy">
+            <span class="shot__label">Scissors · wall</span>
+          </button>
+          <button class="shot shot--tall reveal" type="button" data-lightbox-title="A sharp finish" data-lightbox-src="assets/img/shop-4.jpg">
+            <img src="assets/img/shop-4.jpg" alt="Barber tidying a hairline with clippers" width="1000" height="1500" loading="lazy">
+            <span class="shot__label">Hairline · finish</span>
+          </button>
+          <button class="shot reveal" type="button" data-lightbox-title="Chairs and mirrors" data-lightbox-src="assets/img/shop-5.jpg">
+            <img src="assets/img/shop-5.jpg" alt="Barbershop interior with leather chairs and mirrors" width="1500" height="1000" loading="lazy">
+            <span class="shot__label">The shop · chairs</span>
+          </button>
+          <button class="shot shot--wide reveal" type="button" data-lightbox-title="Behind the chair" data-lightbox-src="assets/img/shop-6.jpg">
+            <img src="assets/img/shop-6.jpg" alt="A barber’s chair and mirror in a corner of the shop" width="1500" height="1000" loading="lazy">
+            <span class="shot__label">Space · craft</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--voices" id="depoimentos" aria-labelledby="depoimentos-title">
+      <div class="wrap voices">
+        <div class="voices__aside reveal">
+          <p class="section__index">05 / Sample reviews</p>
+          <h2 class="section__title" id="depoimentos-title">From<br>the chair</h2>
+          <p class="section__note">Three fictional reviews to show how customer stories could look. These are illustrative, not genuine testimonials.</p>
+        </div>
+
+        <div class="quotes">
+          <figure class="quote quote--lead reveal">
+            <blockquote>“I’d had the same cut for three years. Oliver asked what I was after, took a proper look and suggested something different. Best haircut I’ve had in ages.”</blockquote>
+            <figcaption><span class="quote__name">James W.</span><span class="quote__meta">Haircut · fictional review</span></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>“Harry’s beard trim is worth making time for. A proper hot towel, a careful razor finish and never rushed. I leave looking like I’ve actually had eight hours’ sleep.”</blockquote>
+            <figcaption><span class="quote__name">Thomas R.</span><span class="quote__meta">Beard trim · fictional review</span></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>“I took my six-year-old in expecting a fuss. George had a chat with him, let him pick his cape and finished the whole cut without a single tear.”</blockquote>
+            <figcaption><span class="quote__name">Charlotte M.</span><span class="quote__meta">Children’s haircut · fictional review</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--where" id="onde" aria-labelledby="onde-title">
+      <div class="wrap where">
+        <div class="where__info reveal">
+          <p class="section__index">06 / Find us</p>
+          <h2 class="section__title" id="onde-title">Shoreditch.<br>Just round the corner.</h2>
+          <address class="where__address">
+            12 Bramble Yard (fictional address)<br>
+            Shoreditch · London<br>
+            Portfolio demo — not a trading premises
+          </address>
+          <dl class="where__facts">
+            <div><dt>Mon–Fri</dt><dd>9am–7pm</dd></div>
+            <div><dt>Saturday</dt><dd>9am–7pm</dd></div>
+            <div><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+          <p class="where__transit">An East London setting for this fictional shop. The map is illustrative; the link below explores the Shoreditch area, not a real business address.</p>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Shoreditch+London" target="_blank" rel="noopener">Explore Shoreditch on Google Maps</a>
+        </div>
+
+        <div class="map reveal" role="img" aria-label="Illustrative map of a fictional barbershop in London; not for directions">
+          <!-- Illustrative map, not a real street layout -->
+          <svg viewBox="0 0 640 520" aria-hidden="true" focusable="false">
+            <rect width="640" height="520" fill="#111"/>
+            <g stroke="#262626" stroke-width="18" fill="none">
+              <path d="M-20 110 H660"/>
+              <path d="M-20 330 H660"/>
+              <path d="M120 -20 V540"/>
+              <path d="M470 -20 V540"/>
+              <path d="M-20 460 H660"/>
+            </g>
+            <g stroke="#1E1E1E" stroke-width="7" fill="none">
+              <path d="M-20 210 H660"/>
+              <path d="M300 -20 V540"/>
+              <path d="M-20 50 H660"/>
+              <path d="M560 -20 V540"/>
+            </g>
+            <g fill="#3A3228" opacity=".7">
+              <rect x="330" y="120" width="120" height="70"/>
+              <rect x="490" y="220" width="60" height="90"/>
+              <rect x="130" y="220" width="75" height="90"/>
+              <rect x="130" y="345" width="60" height="55"/>
+            </g>
+            <g font-family="Barlow Condensed, sans-serif" font-size="13" fill="#6B655C" letter-spacing="1.5">
+              <text x="28" y="100">BRAMBLE YARD</text>
+              <text x="300" y="325">EAST LONDON</text>
+              <text x="500" y="500">DEMO MAP</text>
+            </g>
+            <g transform="translate(320 205)">
+              <circle r="38" fill="#B08D57" opacity=".12"/>
+              <circle r="17" fill="#B08D57"/>
+              <circle r="5" fill="#0A0A0A"/>
+            </g>
+          </svg>
+          <div class="map__card">
+            <span class="map__kicker">Bramble &amp; Blade</span>
+            <span class="map__line">12 Bramble Yard · fictional</span>
+            <span class="map__fake">Illustrative map</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <p class="footer__brand" aria-hidden="true">Bramble<br>&amp; Blade</p>
+        <div class="footer__cols">
+          <div>
+            <p class="footer__label">Demo address</p>
+            <address>12 Bramble Yard (fictional address)<br>Shoreditch · London<br>Portfolio demo — not a trading premises</address>
+          </div>
+          <div>
+            <p class="footer__label">Demo contact</p>
+            <p>020 7946 0328 · not in service</p>
+            <p>hello@brambleandblade.example</p>
+          </div>
+          <div>
+            <p class="footer__label">Opening hours</p>
+            <p>Mon–Sat, 9am–7pm<br>Closed Sundays</p>
+            <p><a href="#agendar">Book an appointment</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Bramble &amp; Blade · Portfolio concept</p>
+        <p>Fictional portfolio project. Brand, team, reviews, address, contact details, prices and availability are illustrative. No real bookings or messages. Photos: Pexels (free licence). Video: supplied with the original mock-up.</p>
+        <a href="#topo">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="mobile-cta" href="#agendar">Book an appointment</a>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <button class="lightbox__close" type="button" id="lightbox-close">Close <span aria-hidden="true">×</span></button>
+    <div class="lightbox__frame" id="lightbox-frame"></div>
+    <p class="lightbox__caption" id="lightbox-title"></p>
+  </dialog>
+</body>
+</html>

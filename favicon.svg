@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bramble and Blade">
+  <rect width="64" height="64" fill="#0A0A0A"/>
+  <g transform="translate(32 32)">
+    <rect x="-15" y="-15" width="30" height="30" fill="none" stroke="#B08D57" stroke-width="2" transform="rotate(45)"/>
+    <line x1="0" y1="-22" x2="0" y2="22" stroke="#B08D57" stroke-width="2"/>
+    <line x1="-22" y1="0" x2="22" y2="0" stroke="#B08D57" stroke-width="2"/>
+  </g>
+</svg>
